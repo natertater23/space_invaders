@@ -3,6 +3,7 @@ import pygame
 from laser import Laser
 from alien import Alien
 from time import sleep
+from playsound import playsound
 
 
 # This will handle key presses and exiting the game
@@ -21,6 +22,7 @@ def check_user(settings, screen, stats, score, button, ship, aliens, lasers):
                 if len(lasers) < settings.lasers_allowed:
                     new_laser = Laser(settings, screen, ship)
                     lasers.add(new_laser)
+                    playsound('laser.wav')
         # Play button
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x, mouse_y = pygame.mouse.get_pos()
