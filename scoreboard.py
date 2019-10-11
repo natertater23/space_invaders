@@ -11,7 +11,7 @@ class Scoreboard:
         self.settings = settings
         self.stats = stats
 
-        self.txt_color = (30, 30, 30)
+        self.txt_color = (0, 255, 0)
         self.font = pygame.font.SysFont(None, 48)
         self.ships = None
         self.score_image = None
@@ -35,7 +35,7 @@ class Scoreboard:
 
     def prep_score(self):
         rounded_score = int(round(self.stats.score, -1))
-        score_str = "{:,}".format(rounded_score)
+        score_str = "Score: " + "{:,}".format(rounded_score)
         self.score_image = self.font.render(score_str, True, self.txt_color, self.settings.bg_color)
 
         self.score_rect = self.score_image.get_rect()
@@ -50,7 +50,7 @@ class Scoreboard:
 
     def prep_high_score(self):
         high_score = int(round(self.stats.high_score, -1))
-        high_score_str = "{:,}".format(high_score)
+        high_score_str = "High Score: " + "{:,}".format(high_score)
         self.high_score_image = self.font.render(high_score_str, True, self.txt_color, self.settings.bg_color)
 
         self.high_score_rect = self.score_image.get_rect()
@@ -58,7 +58,7 @@ class Scoreboard:
         self.high_score_rect.top = self.score_rect.top
 
     def prep_level(self):
-        self.level_image = self.font.render(str(self.stats.level), True, self.txt_color, self.settings.bg_color)
+        self.level_image = self.font.render("Level " + str(self.stats.level), True, self.txt_color, self.settings.bg_color)
 
         self.level_rect = self.level_image.get_rect()
         self.level_rect.right = self.score_rect.right

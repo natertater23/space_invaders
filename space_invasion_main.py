@@ -9,12 +9,14 @@ from scoreboard import Scoreboard
 
 
 def play():
+    pygame.mixer.pre_init(44100, -16, 2, 2048)
+    pygame.mixer.init()
     pygame.init()
     settings = Settings()
     # Create Window
     screen = pygame.display.set_mode((settings.screen_width, settings.screen_height))
     pygame.display.set_caption("Space Invaders")
-    
+
     button = Button(screen, "Play")
     stats = GameStats(settings)
     ship = Ship(settings, screen)
