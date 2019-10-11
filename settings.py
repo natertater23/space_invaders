@@ -16,7 +16,7 @@ class Settings:
         self.laser_color = (255, 0, 0)
         self.lasers_allowed = 4
         # Alien settings
-        self.alien_speed = 1
+        self.alien_speed = 2
         self.fleet_speed = 10
         self.fleet_direction = 1  # 1 is right -1 is left
         # Game settings

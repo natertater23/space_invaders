@@ -22,7 +22,7 @@ def check_user(settings, screen, stats, score, button, ship, aliens, lasers):
                 if len(lasers) < settings.lasers_allowed:
                     new_laser = Laser(settings, screen, ship)
                     lasers.add(new_laser)
-                    playsound('laser.wav')
+                    playsound('sounds/laser.wav')
         # Play button
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_x, mouse_y = pygame.mouse.get_pos()
