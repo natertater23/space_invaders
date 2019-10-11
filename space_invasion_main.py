@@ -13,7 +13,7 @@ def play():
     settings = Settings()
     # Create Window
     screen = pygame.display.set_mode((settings.screen_width, settings.screen_height))
-    pygame.display.set_caption("Alien Invasion")
+    pygame.display.set_caption("Space Invaders")
 
     button = Button(screen, "Play")
     stats = GameStats(settings)

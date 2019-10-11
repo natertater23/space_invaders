@@ -55,6 +55,8 @@ def update_screen(settings, screen, stats, score, ship, aliens, lasers, button):
     score.show_score()
     if not stats.game_active:
         button.draw_button()
+        pygame.mouse.set_visible(True)
+
     pygame.display.flip()
 
 
