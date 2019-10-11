@@ -24,7 +24,7 @@ def play():
     lasers = Group()
     aliens = Group()
     gf.create_aliens(settings, screen, ship, aliens)
-    # Game loop
+    # Game Loop
     while True:
 
         gf.check_user(settings, screen, stats, score, button, ship, aliens, lasers)
